@@ -8,8 +8,6 @@ sns.set(style='dark')
 import plotly.express as px
 
 
-
-
 def create_daily_orders_df(df):
     daily_orders_df = df.resample(rule='D', on='order_date').agg({
         "order_id": "nunique",
